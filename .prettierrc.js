@@ -6,4 +6,12 @@ module.exports = {
   quoteProps: "consistent",
   semi: true,
   useTabs: false,
+  overrides: [
+    {
+      files: "*.md",
+      options: {
+        printWidth: 60,
+      },
+    },
+  ],
 };

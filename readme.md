@@ -65,7 +65,6 @@
 ```json
 {
   "eslint.validate": [
-    //
     "javascript",
     "javascriptreact",
     "vue",
