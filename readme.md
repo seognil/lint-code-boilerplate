@@ -1,11 +1,19 @@
 # 自动化代码检查和格式化 的 Demo
 
-通过工具对项目内的代码，进行（自动）代码检查和格式化，提高开发质量和效率。
+对项目内的代码，进行（自动）代码检查和格式化。
 
-详情可以试试亲自跑命令，以及看 repo 中相应的配置代码
+借助工具，减少重复性的工作，提高开发质量和效率！
+
+如果代码写得不规范（ESLint 报错），则只有修正后才能提交代码（通过 huksy + lint-staged 实现）。
+
+试试看（clone/fork 本 repo），修改 `src/` 中的文件（像注释的部分那样将代码写得不规范），并尝试直接提交，看看会发生什么。
+
+---
+
+详情可以看一下命令，以及这些命令所涉及的一些配置代码。
 
 - 全局检查：`npm run lint`
-- 只检查变更的文件（自动化）：`npx lint-staged`
+- 只检查变更的文件（支持自动化）：`npx lint-staged`
 
 ## 涉及的一些关键工具和文件
 
@@ -45,9 +53,24 @@
   - [git hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)
   - [gitignore](https://git-scm.com/docs/gitignore#_pattern_format)
 
-## VS Code 扩展
+## VS Code
 
 通过扩展，这样不用手动跑 script 的命令，直接在编辑器里就有**即时**的检查和提示了
 
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+
+以及根据 [Alloy 文档](https://github.com/AlloyTeam/eslint-config-alloy/blob/master/README.zh-CN.md#%E5%9C%A8-vscode-%E4%B8%AD%E4%BD%BF%E7%94%A8) 中提及的，识别额外的文件类型。
+
+```json
+{
+  "eslint.validate": [
+    //
+    "javascript",
+    "javascriptreact",
+    "vue",
+    "typescript",
+    "typescriptreact"
+  ]
+}
+```
