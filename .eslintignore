@@ -1,0 +1,11 @@
+node_modules/*
+.cache/*
+dist/*
+
+*.html
+*.json
+*.lock
+*.log
+*.md
+
+package-lock.json

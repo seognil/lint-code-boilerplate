@@ -1,10 +1,7 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "lib": [
-      "ESNext",
-      "DOM",
-    ],
+    "lib": ["ESNext", "DOM"],
     "module": "CommonJS",
     "jsx": "preserve",
     "moduleResolution": "node",
@@ -16,9 +13,7 @@
     "strict": true,
     "noImplicitReturns": true,
     "declaration": true,
-    "sourceMap": true,
+    "sourceMap": true
   },
-  "include": [
-    "src/*"
-  ]
+  "include": ["src/*"]
 }
